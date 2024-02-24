@@ -1,18 +1,9 @@
-function mergeObjects(...objects) {
-    let res = Object.assign(...objects);
-    console.log(res)
+function printStrings(arr, num) {
+  for (let i = 1; i <= num; i++) {
+    arr.forEach(str => {
+      console.log(`${str} ${i}`);
+    });
+  }
 }
 
-mergeObjects(
-    {
-        name: 'bass',
-        age: 42
-    },
-    {
-        type: 'car',
-        name: 'Ferrari'
-    },
-    {
-        type: 'bike'
-    }
-)
+printStrings(["floor", "vagon"], 3);
