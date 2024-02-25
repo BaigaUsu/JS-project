@@ -1,12 +1,13 @@
 let object = {
     name: 'Andrey',
     say: sayName,
+    shoot: arrowFunc
 };
 
 let object2 = {
     name: 'Ivan',
-    say: sayName
-
+    say: sayName,
+    shoot: arrowFunc
 }
 
 function sayName() {
@@ -25,3 +26,7 @@ let boundObject = sayName.bind(object)
 boundObject()
 // В результате мы видим имя "Андрей", потому что при использовании bind мы явно указываем, что объект должен быть связан с this внутри функции.
 // Это позволяет нам вызывать функцию с заданным контекстом объекта, не зависящим от того, как функция была объявлена.
+
+const arrowFunc = () => {
+  console.log(this.name);
+};
