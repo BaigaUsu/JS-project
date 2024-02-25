@@ -46,7 +46,13 @@ arrowBound()
 
 const greetingsAndNames = {
   greeting: "Привет",
-  names: ["Жаныбек", "Алина", "Иван"]
+  names: ["Жаныбек", "Алина", "Иван"],
+  greetEveryone: function() {
+    this.names.forEach(name => {
+      console.log(`${this.greeting}, ${name}!`);
+    });
+  }
 };
+
 
 
